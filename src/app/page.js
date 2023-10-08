@@ -1,9 +1,21 @@
+import {HeroBanner} from "./components";
+
 export default function Home() {
+  const products = ["Product 1", "Product 2"];
+
   return (
     <>
-      <div className='text-green-400'>
-        <h1 className='text-4xl'>Echoer is headphone website</h1>
+      <HeroBanner />
+      <div>
+        <h2>Best selling products</h2>
+        <p>Speakers of many types</p>
+        <div>
+          {products.map(product => {
+            return product;
+          })}
+        </div>
       </div>
+      Footer
     </>
   );
 }

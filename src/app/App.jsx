@@ -1,16 +1,18 @@
+"use client";
+
 import React from "react";
 import {HeroBanner} from "./components";
 import {client} from "./lib/client";
 
 const App = ({productData, bannerData}) => {
   const products = ["Product 1e", "Product 2"];
-  console.log(productData);
+  console.log("this is working.....");
+  console.log(bannerData);
   return (
     <>
       <HeroBanner />
-      {console.log(productData)}
       <div className='products-heading'>
-        <h2 className=' text-4xl'>Best selling products</h2>
+        <h2 className=' text-4xl'>Best selling products MID TEXT</h2>
         <p>Speakers of many types</p>
       </div>
       <div className='products-containr'>
@@ -29,6 +31,7 @@ export const getServerSideProps = async () => {
 
   const bannerQuery = '*[_type == "banner"]';
   const bannerData = await client.fetch(bannerQuery);
+  console.log(productData);
   return {
     props: {productData, bannerData}
   };

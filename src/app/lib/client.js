@@ -1,8 +1,5 @@
-import {createClient} from "@sanity/client";
-import imageUrlBuilder from "@sanity/image-url";
-
 export const client = createClient({
-  projectId: process.env.NEXT_PROJECT_ID,
+  projectId: "lnru3yc2",
   dataset: "production",
   apiVersion: "2023-10-09",
   useCdn: true,
